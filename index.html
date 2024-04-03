@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Submission Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Monthly Inventory Submission</h1>
+        <p>Please complete the form below to submit monthly inventory counts and reconciliations.</p>
+    </header>
+    <main>
+        <form action="https://formspree.io/YOUR_FORMSPREE_ENDPOINT" method="POST" enctype="multipart/form-data" id="inventoryForm">
+            <div class="form-group">
+                <label for="month">Month:</label>
+                <input type="month" id="month" name="month" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="inventoryCount">Inventory Count:</label>
+                <input type="text" id="inventoryCount" name="inventoryCount" placeholder="e.g., 150" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="notes">Notes:</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Notes on inventory count or discrepancies"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="documents">Attach Documents:</label>
+                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.png" multiple>
+            </div>
+            
+            <button type="submit">Submit Inventory Report</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
